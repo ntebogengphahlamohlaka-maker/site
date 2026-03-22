@@ -4,297 +4,297 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#b85c1b" />
-  <meta name="description" content="NTEBOGENG PHAHLAMOHLAKA food vlog portfolio featuring food handling concepts and popular South African meals." />
+  <meta
+    name="description"
+    content="NTEBOGENG PHAHLAMOHLAKA food vlog portfolio featuring food handling concepts, kitchen standards, and popular South African meals with detailed recipes."
+  />
   <title>NTEBOGENG PHAHLAMOHLAKA | Food Vlog Portfolio</title>
 
   <style>
-    :root {
-      --bg: #fff8f1;
-      --bg-soft: #fff1df;
-      --surface: rgba(255,255,255,0.92);
-      --surface-strong: rgba(255,255,255,0.98);
-      --text: #2d221d;
-      --muted: #6e5a50;
-      --primary: #c1641b;
-      --primary-dark: #8f4513;
-      --accent: #2e7d32;
-      --accent-2: #e6b75a;
-      --accent-soft: rgba(46,125,50,0.1);
-      --border: rgba(193,100,27,0.14);
-      --shadow: 0 20px 50px rgba(91, 47, 18, 0.12);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
-      --max: 1280px;
-      --nav-h: 78px;
+    :root{
+      --bg:#fff8f1;
+      --bg-soft:#fff1df;
+      --surface:rgba(255,255,255,0.94);
+      --surface-strong:rgba(255,255,255,0.98);
+      --text:#2d221d;
+      --muted:#6f5b51;
+      --primary:#c1641b;
+      --primary-dark:#8f4513;
+      --accent:#2e7d32;
+      --accent-2:#e6b75a;
+      --accent-soft:rgba(46,125,50,0.10);
+      --border:rgba(193,100,27,0.14);
+      --shadow:0 20px 45px rgba(91,47,18,0.12);
+      --radius-xl:28px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --radius-sm:12px;
+      --max:1280px;
+      --nav-h:76px;
     }
 
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+    *{
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--text);
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      color:var(--text);
       background:
         radial-gradient(circle at 10% 0%, rgba(230,183,90,0.18), transparent 20%),
-        radial-gradient(circle at 100% 20%, rgba(46,125,50,0.08), transparent 18%),
+        radial-gradient(circle at 100% 20%, rgba(46,125,50,0.09), transparent 18%),
         linear-gradient(180deg, #fffaf4 0%, #fff2e6 100%);
-      overflow-x: hidden;
-      user-select: none;
+      overflow-x:hidden;
+      user-select:none;
     }
 
-    body.loading {
-      overflow: hidden;
+    body.loading{
+      overflow:hidden;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-      -webkit-user-drag: none;
-      user-drag: none;
+    img{
+      display:block;
+      max-width:100%;
+      -webkit-user-drag:none;
+      user-drag:none;
     }
 
-    a, button, input {
-      font: inherit;
+    a,button,input{
+      font:inherit;
     }
 
-    .grain::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image: radial-gradient(rgba(0,0,0,0.022) 1px, transparent 1px);
-      background-size: 20px 20px;
-      opacity: 0.3;
-      z-index: 0;
+    .grain::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:radial-gradient(rgba(0,0,0,0.022) 1px, transparent 1px);
+      background-size:20px 20px;
+      opacity:0.28;
+      z-index:0;
     }
 
-    .bg-orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 0;
-      animation: drift 11s ease-in-out infinite alternate;
+    .bg-orb{
+      position:fixed;
+      border-radius:50%;
+      filter:blur(40px);
+      opacity:0.4;
+      pointer-events:none;
+      z-index:0;
+      animation:drift 12s ease-in-out infinite alternate;
     }
 
-    .bg-orb.one {
-      width: 260px;
-      height: 260px;
-      background: rgba(193,100,27,0.12);
-      top: 90px;
-      right: -60px;
+    .bg-orb.one{
+      width:260px;
+      height:260px;
+      background:rgba(193,100,27,0.12);
+      top:90px;
+      right:-60px;
     }
 
-    .bg-orb.two {
-      width: 220px;
-      height: 220px;
-      background: rgba(46,125,50,0.08);
-      bottom: 80px;
-      left: -50px;
-      animation-duration: 13s;
+    .bg-orb.two{
+      width:220px;
+      height:220px;
+      background:rgba(46,125,50,0.09);
+      bottom:70px;
+      left:-50px;
+      animation-duration:14s;
     }
 
-    @keyframes drift {
-      from { transform: translateY(0) translateX(0); }
-      to { transform: translateY(18px) translateX(-14px); }
+    @keyframes drift{
+      from{transform:translateY(0) translateX(0);}
+      to{transform:translateY(18px) translateX(-12px);}
     }
 
-    .loader-screen {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, rgba(255,248,241,0.98), rgba(255,239,219,0.98));
-      transition: opacity 0.5s ease, visibility 0.5s ease;
+    .loader-screen{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg, rgba(255,248,241,0.98), rgba(255,239,219,0.98));
+      transition:opacity .5s ease, visibility .5s ease;
     }
 
-    .loader-screen.hide {
-      opacity: 0;
-      visibility: hidden;
+    .loader-screen.hide{
+      opacity:0;
+      visibility:hidden;
     }
 
-    .loader-box {
-      width: min(92vw, 430px);
-      background: var(--surface-strong);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      border-radius: 30px;
-      padding: 28px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+    .loader-box{
+      width:min(92vw, 430px);
+      background:var(--surface-strong);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      border-radius:30px;
+      padding:28px;
+      text-align:center;
     }
 
-    .loader-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 14px;
+    .loader-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-weight:800;
+      font-size:.82rem;
+      letter-spacing:.04em;
+      margin-bottom:14px;
     }
 
-    .loader-title {
-      margin: 0;
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      letter-spacing: -0.04em;
-      color: var(--primary-dark);
+    .loader-title{
+      margin:0;
+      font-size:clamp(1.5rem, 3vw, 2.2rem);
+      letter-spacing:-.04em;
+      color:var(--primary-dark);
     }
 
-    .loader-text {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 12px 0 18px;
+    .loader-text{
+      color:var(--muted);
+      line-height:1.75;
+      margin:12px 0 18px;
     }
 
-    .loader-track {
-      width: 100%;
-      height: 12px;
-      border-radius: 999px;
-      background: #f4e2cf;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid rgba(193,100,27,0.12);
+    .loader-track{
+      width:100%;
+      height:12px;
+      border-radius:999px;
+      background:#f4e2cf;
+      overflow:hidden;
+      border:1px solid rgba(193,100,27,0.12);
     }
 
-    .loader-bar {
-      width: 0%;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--primary), var(--accent-2));
-      box-shadow: 0 8px 22px rgba(193,100,27,0.28);
-      transition: width 0.25s ease;
+    .loader-bar{
+      width:0%;
+      height:100%;
+      border-radius:inherit;
+      background:linear-gradient(90deg, var(--primary), var(--accent-2));
+      box-shadow:0 8px 22px rgba(193,100,27,0.28);
+      transition:width .25s ease;
     }
 
-    .loader-percentage {
-      margin-top: 10px;
-      font-weight: 800;
-      color: var(--primary-dark);
-      letter-spacing: 0.04em;
+    .loader-percentage{
+      margin-top:10px;
+      font-weight:800;
+      color:var(--primary-dark);
+      letter-spacing:.04em;
     }
 
-    .site-wrap {
-      position: relative;
-      z-index: 1;
+    .site-wrap{
+      position:relative;
+      z-index:1;
     }
 
-    .progress-line {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      width: 0%;
-      z-index: 300;
-      background: linear-gradient(90deg, var(--primary), var(--accent-2), var(--accent));
-      box-shadow: 0 6px 18px rgba(193,100,27,0.25);
+    .progress-line{
+      position:fixed;
+      top:0;
+      left:0;
+      height:4px;
+      width:0%;
+      z-index:300;
+      background:linear-gradient(90deg, var(--primary), var(--accent-2), var(--accent));
+      box-shadow:0 6px 18px rgba(193,100,27,0.24);
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      backdrop-filter: blur(18px);
-      background: rgba(255, 248, 241, 0.78);
-      border-bottom: 1px solid rgba(193,100,27,0.1);
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:200;
+      backdrop-filter:blur(18px);
+      background:rgba(255,248,241,0.80);
+      border-bottom:1px solid rgba(193,100,27,0.10);
     }
 
-    .container {
-      width: min(var(--max), calc(100% - 28px));
-      margin: 0 auto;
+    .container{
+      width:min(var(--max), calc(100% - 28px));
+      margin:0 auto;
     }
 
-    .topbar-inner {
-      min-height: var(--nav-h);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 14px 0;
+    .topbar-inner{
+      min-height:var(--nav-h);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:14px 0;
     }
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
     }
 
-    .brand-name {
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      font-size: 0.95rem;
-      color: var(--primary-dark);
+    .brand-name{
+      font-weight:900;
+      letter-spacing:.08em;
+      font-size:.95rem;
+      color:var(--primary-dark);
     }
 
-    .brand-sub {
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 700;
+    .brand-sub{
+      color:var(--muted);
+      font-size:.82rem;
+      font-weight:700;
     }
 
-    .nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
     .nav a,
-    .btn {
-      text-decoration: none;
-      color: var(--text);
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(193,100,27,0.14);
-      padding: 10px 14px;
-      border-radius: 999px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
+    .btn{
+      text-decoration:none;
+      color:var(--text);
+      background:rgba(255,255,255,0.70);
+      border:1px solid rgba(193,100,27,0.14);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      cursor:pointer;
     }
 
     .nav a:hover,
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 24px rgba(91, 47, 18, 0.08);
-      background: #fff;
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 24px rgba(91,47,18,0.08);
+      background:#fff;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #e48a2b 100%);
-      color: #fff;
-      border: none;
+    .btn-primary{
+      background:linear-gradient(135deg, var(--primary) 0%, #e48a2b 100%);
+      color:#fff;
+      border:none;
     }
 
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #b35516 0%, #df8527 100%);
+    .btn-primary:hover{
+      background:linear-gradient(135deg, #b35516 0%, #df8527 100%);
     }
 
-    .hero {
-      padding: 36px 0 26px;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 18px;
-      align-items: stretch;
+    .hero{
+      padding:36px 0 26px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
     }
 
     .hero-card,
@@ -303,266 +303,266 @@
     .meal-card,
     .footer-card,
     .mini-card,
-    .article-banner {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      position: relative;
+    .article-banner{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
     }
 
-    .hero-card {
-      padding: 30px;
-      min-height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      isolation: isolate;
+    .hero-card{
+      padding:30px;
+      min-height:500px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      isolation:isolate;
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(230,183,90,0.18), transparent 65%);
-      z-index: -1;
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:auto -40px -40px auto;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(230,183,90,0.18), transparent 65%);
+      z-index:-1;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      width: fit-content;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 16px;
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      width:fit-content;
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-weight:800;
+      font-size:.82rem;
+      letter-spacing:.04em;
+      margin-bottom:16px;
     }
 
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 16px;
+    .article-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:16px;
     }
 
-    .meta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid rgba(193,100,27,0.12);
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 700;
+    .meta-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.78);
+      border:1px solid rgba(193,100,27,0.12);
+      color:var(--muted);
+      font-size:.82rem;
+      font-weight:700;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 5vw, 4.8rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
+    h1{
+      margin:0;
+      font-size:clamp(2.2rem, 5vw, 4.8rem);
+      line-height:.95;
+      letter-spacing:-.05em;
     }
 
-    h1 span {
-      color: var(--primary);
-      display: block;
+    h1 span{
+      color:var(--primary);
+      display:block;
     }
 
-    .hero p {
-      font-size: 1.02rem;
-      line-height: 1.8;
-      color: var(--muted);
-      margin: 16px 0 22px;
-      max-width: 780px;
+    .hero p{
+      font-size:1.02rem;
+      line-height:1.8;
+      color:var(--muted);
+      margin:16px 0 22px;
+      max-width:780px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .hero-side {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      gap: 18px;
-      align-self: stretch;
+    .hero-side{
+      display:grid;
+      grid-template-rows:auto 1fr;
+      gap:18px;
+      align-self:stretch;
     }
 
-    .article-banner {
-      padding: 18px;
-      background: linear-gradient(135deg, rgba(193,100,27,0.08), rgba(46,125,50,0.05));
+    .article-banner{
+      padding:18px;
+      background:linear-gradient(135deg, rgba(193,100,27,0.08), rgba(46,125,50,0.05));
     }
 
-    .article-banner strong {
-      color: var(--primary-dark);
-      font-size: 1.02rem;
+    .article-banner strong{
+      color:var(--primary-dark);
+      font-size:1.02rem;
     }
 
-    .article-banner p {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 8px 0 0;
+    .article-banner p{
+      color:var(--muted);
+      line-height:1.75;
+      margin:8px 0 0;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
     }
 
-    .stat-box {
-      padding: 22px;
-      min-height: 150px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, #fff 0%, #fff6eb 100%);
-      border: 1px solid rgba(193,100,27,0.12);
-      box-shadow: 0 12px 24px rgba(91, 47, 18, 0.06);
-      transition: transform 0.3s ease;
+    .stat-box{
+      padding:22px;
+      min-height:150px;
+      border-radius:24px;
+      background:linear-gradient(180deg, #fff 0%, #fff6eb 100%);
+      border:1px solid rgba(193,100,27,0.12);
+      box-shadow:0 12px 24px rgba(91,47,18,0.06);
+      transition:transform .3s ease;
     }
 
-    .stat-box:hover {
-      transform: translateY(-5px);
+    .stat-box:hover{
+      transform:translateY(-5px);
     }
 
-    .stat-number {
-      font-size: 2.15rem;
-      font-weight: 900;
-      color: var(--primary-dark);
-      line-height: 1;
+    .stat-number{
+      font-size:2.15rem;
+      font-weight:900;
+      color:var(--primary-dark);
+      line-height:1;
     }
 
-    .stat-label {
-      margin-top: 10px;
-      color: var(--muted);
-      line-height: 1.65;
-      font-weight: 700;
+    .stat-label{
+      margin-top:10px;
+      color:var(--muted);
+      line-height:1.65;
+      font-weight:700;
     }
 
-    section {
-      padding: 12px 0;
+    section{
+      padding:12px 0;
     }
 
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin: 6px 0 18px;
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      margin:6px 0 18px;
     }
 
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.7rem, 3vw, 2.9rem);
-      letter-spacing: -0.04em;
+    .section-head h2{
+      margin:0;
+      font-size:clamp(1.7rem, 3vw, 2.9rem);
+      letter-spacing:-.04em;
     }
 
-    .section-head p {
-      margin: 0;
-      max-width: 780px;
-      color: var(--muted);
-      line-height: 1.75;
+    .section-head p{
+      margin:0;
+      max-width:780px;
+      color:var(--muted);
+      line-height:1.75;
     }
 
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
+    .controls{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:20px;
     }
 
     .search,
-    .toggle-btn {
-      border: 1px solid rgba(193,100,27,0.16);
-      background: rgba(255,255,255,0.84);
-      border-radius: 14px;
-      padding: 12px 14px;
-      color: var(--text);
-      transition: 0.25s ease;
+    .toggle-btn{
+      border:1px solid rgba(193,100,27,0.16);
+      background:rgba(255,255,255,0.84);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--text);
+      transition:.25s ease;
     }
 
-    .search {
-      min-width: 260px;
-      flex: 1;
+    .search{
+      min-width:260px;
+      flex:1;
     }
 
-    .search:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(193,100,27,0.08);
+    .search:focus{
+      outline:none;
+      border-color:var(--primary);
+      box-shadow:0 0 0 4px rgba(193,100,27,0.08);
     }
 
-    .toggle-btn {
-      cursor: pointer;
-      font-weight: 800;
+    .toggle-btn{
+      cursor:pointer;
+      font-weight:800;
     }
 
-    .toggle-btn.active {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
+    .toggle-btn.active{
+      background:var(--primary);
+      color:#fff;
+      border-color:var(--primary);
     }
 
-    .concept-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 18px;
+    .concept-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
     }
 
     .concept-card,
     .panel,
     .footer-card,
-    .mini-card {
-      padding: 22px;
+    .mini-card{
+      padding:22px;
     }
 
     .concept-card,
     .meal-card,
     .panel,
     .footer-card,
-    .mini-card {
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    .mini-card{
+      transition:transform .35s ease, box-shadow .35s ease;
     }
 
     .concept-card:hover,
     .meal-card:hover,
     .panel:hover,
     .footer-card:hover,
-    .mini-card:hover {
-      transform: translateY(-6px);
+    .mini-card:hover{
+      transform:translateY(-6px);
     }
 
-    .rank {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
-      font-weight: 900;
-      margin-bottom: 14px;
-      box-shadow: 0 12px 24px rgba(143,69,19,0.2);
+    .rank{
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color:#fff;
+      font-weight:900;
+      margin-bottom:14px;
+      box-shadow:0 12px 24px rgba(143,69,19,0.20);
     }
 
     .concept-card h3,
     .meal-card h3,
     .panel h3,
-    .mini-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.18rem;
+    .mini-card h3{
+      margin:0 0 8px;
+      font-size:1.18rem;
     }
 
     .concept-card p,
@@ -570,261 +570,272 @@
     .panel p,
     .footer-card p,
     .mini-card p,
-    li {
-      color: var(--muted);
-      line-height: 1.75;
+    li{
+      color:var(--muted);
+      line-height:1.75;
     }
 
-    .meal-grid {
-      display: grid;
-      gap: 18px;
+    .meal-grid{
+      display:grid;
+      gap:18px;
     }
 
-    .meal-card {
-      display: grid;
-      grid-template-columns: 290px 1fr;
-      gap: 18px;
-      padding: 18px;
-      align-items: stretch;
+    .meal-card{
+      display:grid;
+      grid-template-columns:290px 1fr;
+      gap:18px;
+      padding:18px;
+      align-items:stretch;
     }
 
-    .meal-image {
-      position: relative;
-      border-radius: 22px;
-      min-height: 255px;
-      overflow: hidden;
-      background: linear-gradient(145deg, rgba(193,100,27,0.12), rgba(230,183,90,0.18));
-      border: 1px solid rgba(193,100,27,0.14);
+    .meal-image{
+      position:relative;
+      border-radius:22px;
+      min-height:255px;
+      overflow:hidden;
+      background:linear-gradient(145deg, rgba(193,100,27,0.12), rgba(230,183,90,0.18));
+      border:1px solid rgba(193,100,27,0.14);
     }
 
-    .meal-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 255px;
-      object-fit: cover;
+    .meal-image img{
+      width:100%;
+      height:100%;
+      min-height:255px;
+      object-fit:cover;
     }
 
-    .image-label {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(255,255,255,0.88);
-      border: 1px solid rgba(193,100,27,0.12);
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 7px 10px;
-      border-radius: 999px;
-      z-index: 2;
+    .image-label{
+      position:absolute;
+      top:14px;
+      right:14px;
+      background:rgba(255,255,255,0.88);
+      border:1px solid rgba(193,100,27,0.12);
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:800;
+      padding:7px 10px;
+      border-radius:999px;
+      z-index:2;
     }
 
-    .meal-content {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .meal-content{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
-    .meal-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: flex-start;
-      flex-wrap: wrap;
+    .meal-top{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
+      flex-wrap:wrap;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: fit-content;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(46,125,50,0.1);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 800;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(46,125,50,0.10);
+      color:var(--accent);
+      font-size:.82rem;
+      font-weight:800;
     }
 
-    .recipe-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 4px;
+    .recipe-columns{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:4px;
     }
 
-    .recipe-box {
-      border-radius: 18px;
-      border: 1px solid rgba(193,100,27,0.12);
-      background: linear-gradient(180deg, #fff 0%, #fffaf2 100%);
-      padding: 16px;
+    .recipe-box{
+      border-radius:18px;
+      border:1px solid rgba(193,100,27,0.12);
+      background:linear-gradient(180deg, #fff 0%, #fffaf2 100%);
+      padding:16px;
     }
 
-    .recipe-box h4 {
-      margin: 0 0 10px;
-      font-size: 1rem;
-      color: var(--primary-dark);
+    .recipe-box h4{
+      margin:0 0 10px;
+      font-size:1rem;
+      color:var(--primary-dark);
     }
 
     .recipe-box ul,
-    .recipe-box ol {
-      margin: 0;
-      padding-left: 18px;
+    .recipe-box ol{
+      margin:0;
+      padding-left:18px;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 8px;
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:8px;
     }
 
-    .triple {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+    .triple{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
     }
 
-    .quote {
-      font-size: clamp(1.26rem, 2.2vw, 2rem);
-      line-height: 1.45;
-      font-weight: 900;
-      color: var(--primary-dark);
-      margin: 0 0 10px;
-      letter-spacing: -0.03em;
+    .quote{
+      font-size:clamp(1.26rem, 2.2vw, 2rem);
+      line-height:1.45;
+      font-weight:900;
+      color:var(--primary-dark);
+      margin:0 0 10px;
+      letter-spacing:-.03em;
     }
 
-    .timeline {
-      display: grid;
-      gap: 14px;
-      margin-top: 14px;
+    .timeline{
+      display:grid;
+      gap:14px;
+      margin-top:14px;
     }
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 14px;
-      align-items: start;
+    .timeline-item{
+      display:grid;
+      grid-template-columns:52px 1fr;
+      gap:14px;
+      align-items:start;
     }
 
-    .timeline-step {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      color: #fff;
-      font-weight: 900;
-      background: linear-gradient(135deg, var(--accent), #56a058);
-      box-shadow: 0 12px 24px rgba(46,125,50,0.18);
+    .timeline-step{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      color:#fff;
+      font-weight:900;
+      background:linear-gradient(135deg, var(--accent), #56a058);
+      box-shadow:0 12px 24px rgba(46,125,50,0.18);
     }
 
-    .footer-card {
-      text-align: center;
-      margin: 24px 0 34px;
+    .footer-card{
+      text-align:center;
+      margin:24px 0 34px;
     }
 
-    .footer-card h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      letter-spacing: -0.04em;
+    .footer-card h2{
+      margin:0 0 10px;
+      font-size:clamp(1.7rem, 3vw, 2.5rem);
+      letter-spacing:-.04em;
     }
 
-    .footer-card p {
-      max-width: 860px;
-      margin: 0 auto 16px;
+    .footer-card p{
+      max-width:860px;
+      margin:0 auto 16px;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px) scale(0.985);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+    .reveal{
+      opacity:0;
+      transform:translateY(30px) scale(.985);
+      transition:opacity .75s ease, transform .75s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0) scale(1);
     }
 
-    .hidden {
-      display: none !important;
+    .hidden{
+      display:none !important;
     }
 
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 20px;
-      transform: translateX(-50%) translateY(20px);
-      background: rgba(45,34,29,0.94);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      z-index: 500;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      box-shadow: 0 18px 30px rgba(0,0,0,0.16);
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:20px;
+      transform:translateX(-50%) translateY(20px);
+      background:rgba(45,34,29,0.94);
+      color:#fff;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.92rem;
+      z-index:500;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .3s ease, transform .3s ease;
+      box-shadow:0 18px 30px rgba(0,0,0,0.16);
     }
 
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
+    .toast.show{
+      opacity:1;
+      transform:translateX(-50%) translateY(0);
     }
 
-    .back-top {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 220;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      border: none;
-      background: linear-gradient(135deg, var(--primary), #df8528);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 1.15rem;
-      box-shadow: 0 16px 28px rgba(193,100,27,0.28);
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.3s ease;
+    .back-top{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:220;
+      width:54px;
+      height:54px;
+      border-radius:50%;
+      border:none;
+      background:linear-gradient(135deg, var(--primary), #df8528);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:1.15rem;
+      box-shadow:0 16px 28px rgba(193,100,27,0.28);
+      cursor:pointer;
+      opacity:0;
+      visibility:hidden;
+      transition:.3s ease;
     }
 
-    .back-top.show {
-      opacity: 1;
-      visibility: visible;
+    .back-top.show{
+      opacity:1;
+      visibility:visible;
     }
 
-    .offline-note {
-      position: sticky;
-      top: var(--nav-h);
-      z-index: 120;
-      margin-top: 8px;
-      display: none;
+    .offline-note{
+      position:sticky;
+      top:var(--nav-h);
+      z-index:120;
+      margin-top:8px;
+      display:none;
     }
 
-    .offline-note.show {
-      display: block;
+    .offline-note.show{
+      display:block;
     }
 
-    .offline-card {
-      background: linear-gradient(135deg, rgba(46,125,50,0.12), rgba(230,183,90,0.12));
-      border: 1px solid rgba(46,125,50,0.18);
-      color: var(--text);
-      border-radius: 18px;
-      padding: 14px 16px;
-      box-shadow: 0 10px 22px rgba(46,125,50,0.08);
-      font-weight: 700;
+    .offline-card{
+      background:linear-gradient(135deg, rgba(46,125,50,0.12), rgba(230,183,90,0.12));
+      border:1px solid rgba(46,125,50,0.18);
+      color:var(--text);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:0 10px 22px rgba(46,125,50,0.08);
+      font-weight:700;
+      line-height:1.7;
     }
 
-    .no-print {
-      display: inline-flex;
+    .no-print{
+      display:inline-flex;
     }
 
-    @media print {
+    .active-link{
+      background:var(--primary);
+      color:#fff !important;
+      border-color:var(--primary) !important;
+    }
+
+    strong{
+      color:var(--primary-dark);
+    }
+
+    @media print{
       .topbar,
       .back-top,
       .progress-line,
@@ -833,13 +844,13 @@
       .offline-note,
       .controls,
       .hero-actions,
-      .no-print {
-        display: none !important;
+      .no-print{
+        display:none !important;
       }
 
-      body {
-        background: #fff;
-        user-select: text;
+      body{
+        background:#fff;
+        user-select:text;
       }
 
       .hero,
@@ -847,8 +858,8 @@
       .concept-grid,
       .meal-card,
       .recipe-columns,
-      .triple {
-        display: block;
+      .triple{
+        display:block;
       }
 
       .hero-card,
@@ -857,42 +868,42 @@
       .meal-card,
       .footer-card,
       .mini-card,
-      .article-banner {
-        box-shadow: none;
-        border: 1px solid #ddd;
-        margin-bottom: 14px;
+      .article-banner{
+        box-shadow:none;
+        border:1px solid #ddd;
+        margin-bottom:14px;
       }
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width:1100px){
       .hero,
       .split,
       .meal-card,
       .recipe-columns,
       .concept-grid,
-      .triple {
-        grid-template-columns: 1fr;
+      .triple{
+        grid-template-columns:1fr;
       }
 
-      .hero-side {
-        grid-template-rows: auto;
+      .hero-side{
+        grid-template-rows:auto;
       }
 
       .meal-image,
-      .meal-image img {
-        min-height: 220px;
+      .meal-image img{
+        min-height:220px;
       }
     }
 
-    @media (max-width: 720px) {
-      .container {
-        width: min(var(--max), calc(100% - 18px));
+    @media (max-width:720px){
+      .container{
+        width:min(var(--max), calc(100% - 18px));
       }
 
       .topbar-inner,
       .section-head,
-      .meal-top {
-        align-items: stretch;
+      .meal-top{
+        align-items:stretch;
       }
 
       .hero-card,
@@ -900,21 +911,21 @@
       .concept-card,
       .footer-card,
       .mini-card,
-      .article-banner {
-        padding: 18px;
+      .article-banner{
+        padding:18px;
       }
 
-      .stats {
-        grid-template-columns: 1fr 1fr;
+      .stats{
+        grid-template-columns:1fr 1fr;
       }
 
-      .stat-box {
-        min-height: 132px;
-        padding: 18px;
+      .stat-box{
+        min-height:132px;
+        padding:18px;
       }
 
-      .nav {
-        justify-content: flex-start;
+      .nav{
+        justify-content:flex-start;
       }
     }
   </style>
@@ -926,11 +937,11 @@
 
   <div class="loader-screen" id="loaderScreen" aria-hidden="true">
     <div class="loader-box">
-      <div class="loader-badge">ARCHIVE ARTICLE</div>
+      <div class="loader-badge">FOOD PORTFOLIO</div>
       <h2 class="loader-title">Loading Food Vlog Portfolio</h2>
       <p class="loader-text">
-        Preparing the article style food portfolio for NTEBOGENG PHAHLAMOHLAKA
-        with kitchen standards, meal showcases, and interactive food learning sections.
+        Preparing a clean food portfolio with kitchen knowledge, detailed meal recipes,
+        and food handling concepts for NTEBOGENG PHAHLAMOHLAKA.
       </p>
       <div class="loader-track">
         <div class="loader-bar" id="loaderBar"></div>
@@ -959,11 +970,13 @@
       </div>
     </header>
 
-<div class="container offline-note" id="offlineNote">
-  <div class="offline-card">
-    Good food does not need the internet. Even offline, the knowledge of preparing safe, clean, and nourishing meals remains valuable. Food is not just about eating it is about health, discipline, and caring for others.
-  </div>
-</div>
+    <div class="container offline-note" id="offlineNote">
+      <div class="offline-card">
+        Good food does not depend on the internet. Even offline, the principles of hygiene,
+        patience, safe cooking, and serving nourishing meals remain valuable. Food is not only
+        about eating. It is also about health, discipline, care, and respect for the people being served.
+      </div>
+    </div>
 
     <main class="container">
       <section class="hero" id="about">
@@ -979,11 +992,11 @@
           <h1>NTEBOGENG <span>PHAHLAMOHLAKA</span></h1>
 
           <p>
-            Welcome to my one page food vlog portfolio built to present my passion for
-            food preparation, safe food handling, and some of the most cooked South
-            African and African meals. This page is designed in an article style to
-            reflect a long standing interest in food, practical learning, neat presentation,
-            and the discipline required in restaurants, food stores, and home kitchens.
+            Welcome to my food vlog portfolio written to showcase my passion for food
+            preparation, kitchen discipline, safe food handling, and some of the most loved South African
+            and African meals. This page reflects my growing knowledge of practical cooking, neat
+            presentation, cleanliness, and the standards expected in restaurants, food stores, catering
+            spaces, and home kitchens.
           </p>
 
           <div class="hero-actions no-print">
@@ -993,32 +1006,35 @@
         </article>
 
         <aside class="hero-side reveal">
-<article class="article-banner">
-  <strong>Food Insight • Real Kitchen Values</strong>
-  <p>
-    Food preparation is more than just cooking it is about hygiene, patience, and respect for the people you serve. Every clean surface, every properly cooked meal, and every balanced ingredient contributes to health, safety, and trust in any kitchen environment.
-  </p>
-</article>
+          <article class="article-banner">
+            <strong>Food Insight • Real Kitchen Values</strong>
+            <p>
+              Food preparation is more than simply cooking. It requires hygiene, patience, good timing,
+              proper storage, and respect for the people who will eat the meal. Every clean surface,
+              every correctly cooked ingredient, and every well-served plate helps build trust and safety
+              in any kitchen environment.
+            </p>
+          </article>
 
           <div class="stats">
             <div class="stat-box">
               <div class="stat-number">10</div>
-              <div class="stat-label">Core food handling concepts every kitchen should understand</div>
+              <div class="stat-label">Core food handling concepts every kitchen worker should understand</div>
             </div>
 
             <div class="stat-box">
               <div class="stat-number">10</div>
-              <div class="stat-label">Popular South African and African meals with simple recipes</div>
+              <div class="stat-label">Popular South African and African meals with detailed recipe steps</div>
             </div>
 
             <div class="stat-box">
               <div class="stat-number">#1</div>
-              <div class="stat-label">Temperature control remains the most important food safety rule</div>
+              <div class="stat-label">Temperature control remains one of the most important food safety rules</div>
             </div>
 
             <div class="stat-box">
               <div class="stat-number">2024</div>
-              <div class="stat-label">Styled as an older food article portfolio to build trust and depth</div>
+              <div class="stat-label">Designed in article style to feel established, polished, and professional</div>
             </div>
           </div>
         </aside>
@@ -1026,29 +1042,34 @@
 
       <section>
         <div class="triple">
-<article class="mini-card reveal">
-  <div class="eyebrow">Food Knowledge</div>
-  <h3>Clean Cooking Saves Lives</h3>
-  <p>
-    Proper food handling prevents illness and protects everyone who eats the meal. Simple habits like washing hands, separating raw and cooked food, and maintaining clean workspaces are the foundation of every professional kitchen.
-  </p>
-</article>
+          <article class="mini-card reveal">
+            <div class="eyebrow">Food Knowledge</div>
+            <h3>Clean Cooking Protects People</h3>
+            <p>
+              Proper food handling reduces the risk of foodborne illness and protects everyone who eats
+              the meal. Washing hands, using clean tools, separating raw and cooked food, and preparing
+              meals at the correct temperatures are essential habits in every kitchen.
+            </p>
+          </article>
 
-<article class="mini-card reveal">
-  <div class="eyebrow">Daily Practice</div>
-  <h3>Consistency Builds Skill</h3>
-  <p>
-    Cooking the same meals correctly over time builds confidence and mastery. From boiling pap to preparing stew, repetition improves timing, taste, and presentation, turning simple cooking into a valuable life skill.
-  </p>
-</article>
+          <article class="mini-card reveal">
+            <div class="eyebrow">Daily Practice</div>
+            <h3>Consistency Builds Skill</h3>
+            <p>
+              Repeating meals correctly over time builds confidence and improves kitchen ability. From
+              boiling pap to preparing stew, daily practice strengthens timing, flavour control, food
+              presentation, and overall cooking discipline.
+            </p>
+          </article>
 
-<article class="mini-card reveal">
-  <div class="eyebrow">Food Purpose</div>
-  <h3>Food Brings People Together</h3>
-  <p>
-    Meals are more than nutrition they create connection, comfort, and culture. Whether at home or in a restaurant, well prepared food shows care, respect, and pride in what you serve to others.
-  </p>
-</article>
+          <article class="mini-card reveal">
+            <div class="eyebrow">Food Purpose</div>
+            <h3>Meals Bring People Together</h3>
+            <p>
+              Food is more than nutrition. It offers comfort, connection, culture, and care. A well-prepared
+              meal can create warmth in a home, professionalism in a workplace, and trust in a business.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -1062,8 +1083,8 @@
 
             <h2>Food Handling Concepts</h2>
             <p>
-              These are the key concepts I am learning and applying to build a strong standard
-              for food service work, restaurant environments, and home cooking.
+              These are the main concepts I am learning and applying in order to build a strong
+              standard for kitchen work, home cooking, restaurant environments, and safe meal service.
             </p>
           </div>
         </div>
@@ -1082,8 +1103,9 @@
             <div class="rank">1</div>
             <h3>Temperature Control</h3>
             <p>
-              Keep hot food hot and cold food cold. The danger zone is where bacteria
-              grow quickly, so food should not stay at unsafe temperatures for long periods.
+              Food should be kept hot when it must stay hot and kept cold when it must stay cold.
+              Unsafe temperatures allow bacteria to grow quickly, especially when food stays too long
+              in the danger zone.
             </p>
           </article>
 
@@ -1091,8 +1113,8 @@
             <div class="rank">2</div>
             <h3>Personal Hygiene</h3>
             <p>
-              Clean hands, clean clothing, and neat food preparation habits reduce
-              contamination and help protect customers and family members.
+              Clean hands, short nails, neat clothing, and good body cleanliness help reduce the risk
+              of contamination. A clean food handler supports a clean kitchen.
             </p>
           </article>
 
@@ -1100,8 +1122,8 @@
             <div class="rank">3</div>
             <h3>Cross Contamination Prevention</h3>
             <p>
-              Raw and cooked foods should be kept separate. Utensils, chopping boards,
-              and storage areas must be managed carefully.
+              Raw food and cooked food must be separated. Using different cutting boards, clean knives,
+              and proper storage containers helps prevent germs from spreading between foods.
             </p>
           </article>
 
@@ -1109,8 +1131,8 @@
             <div class="rank">4</div>
             <h3>Proper Cooking Temperatures</h3>
             <p>
-              Food must be cooked thoroughly and reheated properly to make it safe,
-              enjoyable, and suitable for service.
+              Meat, poultry, and reheated foods must be cooked thoroughly. Cooking food properly
+              improves safety, taste, texture, and customer confidence.
             </p>
           </article>
 
@@ -1118,8 +1140,8 @@
             <div class="rank">5</div>
             <h3>Safe Food Storage</h3>
             <p>
-              Correct storage keeps food fresh, prevents waste, and improves kitchen
-              organization through dating, covering, and first-in-first-out use.
+              Correct storage keeps food fresh and reduces waste. Covering, labeling, dating, and
+              using food in the right order helps maintain a professional kitchen standard.
             </p>
           </article>
 
@@ -1127,8 +1149,8 @@
             <div class="rank">6</div>
             <h3>Cleaning and Sanitizing</h3>
             <p>
-              Surfaces, tools, and equipment must be cleaned regularly to maintain
-              a professional kitchen standard and reduce food safety risks.
+              Kitchen surfaces, utensils, and equipment should be cleaned regularly and properly.
+              A clean workspace reduces food safety risks and improves the overall cooking environment.
             </p>
           </article>
 
@@ -1136,8 +1158,8 @@
             <div class="rank">7</div>
             <h3>Oil and Fat Control</h3>
             <p>
-              Using the right amount of oil and avoiding repeated reuse helps protect
-              food quality, taste, and overall health value.
+              Using the correct amount of oil helps maintain food quality and supports healthier cooking.
+              Oil should not be overused or repeatedly reheated too many times.
             </p>
           </article>
 
@@ -1145,8 +1167,8 @@
             <div class="rank">8</div>
             <h3>Salt and Sugar Control</h3>
             <p>
-              Balanced seasoning improves taste while helping keep meals healthier
-              and more suitable for regular consumption.
+              Proper seasoning improves flavour, but balance is important. Too much salt or sugar can
+              reduce the health value of food, so careful measurement is a useful cooking skill.
             </p>
           </article>
 
@@ -1154,8 +1176,8 @@
             <div class="rank">9</div>
             <h3>Food Quality and Freshness Checks</h3>
             <p>
-              Checking smell, appearance, texture, and freshness helps maintain
-              kitchen standards and protect the people being served.
+              Good food should look, smell, and feel right. Checking freshness, expiry dates, colour,
+              and texture helps prevent unsafe food from being used or served.
             </p>
           </article>
 
@@ -1163,8 +1185,8 @@
             <div class="rank">10</div>
             <h3>Time Management in Food Handling</h3>
             <p>
-              Preparing, serving, and storing food at the right time helps preserve taste,
-              texture, and safety throughout the kitchen workflow.
+              Timing matters in cooking. Preparing, cooking, serving, cooling, and storing food at the
+              right time protects quality and helps the whole kitchen run smoothly.
             </p>
           </article>
         </div>
@@ -1180,8 +1202,9 @@
 
             <h2>South African / African Meals</h2>
             <p>
-              Each meal below now includes a real image file path with extension.
-              Put your images inside an <strong>images</strong> folder using the exact file names shown.
+              Each meal below includes a suggested image path and a more detailed recipe section.
+              Place your food images in the same folder or inside an <strong>images</strong> folder and update the
+              file names if needed.
             </p>
           </div>
         </div>
@@ -1203,7 +1226,7 @@
 
           <article class="meal-card reveal" data-category="traditional home" data-name="pap wors boerewors chakalaka">
             <div class="meal-image">
-              
+              <div class="image-label">pap-wors.jfif</div>
               <img src="pap-wors.jfif" alt="Pap and Wors" />
             </div>
             <div class="meal-content">
@@ -1215,27 +1238,33 @@
                 <div class="badge">Traditional Home Favourite</div>
               </div>
               <p>
-                A South African staple often enjoyed at home and during braais,
-                served with rich chakalaka or relish.
+                A classic South African meal often enjoyed at home, at gatherings, and during braais.
+                It combines smooth or stiff maize meal pap with juicy boerewors and a flavourful relish
+                such as chakalaka or tomato gravy.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
                     <li>2 cups maize meal</li>
-                    <li>4 cups water</li>
-                    <li>Salt</li>
-                    <li>Boerewors sausage</li>
-                    <li>Chakalaka or tomato relish</li>
+                    <li>4 to 5 cups water</li>
+                    <li>1 teaspoon salt</li>
+                    <li>500 g boerewors sausage</li>
+                    <li>1 cup chakalaka or tomato relish</li>
+                    <li>1 tablespoon oil if frying wors in a pan</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Boil salted water and slowly add maize meal.</li>
-                    <li>Stir until thick and cook through.</li>
-                    <li>Grill or fry the wors until fully cooked.</li>
-                    <li>Serve with chakalaka or relish.</li>
+                    <li>Pour water into a pot, add salt, and bring it to a boil over medium heat.</li>
+                    <li>Slowly sprinkle in the maize meal while stirring to avoid lumps forming.</li>
+                    <li>Reduce the heat, cover the pot partly, and allow the pap to cook for 20 to 25 minutes.</li>
+                    <li>Stir well every few minutes until the pap becomes smooth, thick, and fully cooked.</li>
+                    <li>Place the wors on a grill, braai stand, or frying pan and cook over medium heat.</li>
+                    <li>Turn the wors regularly so that it browns evenly and cooks through without burning.</li>
+                    <li>Warm the chakalaka or relish separately in a small pot until heated properly.</li>
+                    <li>Serve the pap hot with the wors and spoon the relish on the side or over the meal.</li>
                   </ol>
                 </div>
               </div>
@@ -1244,7 +1273,7 @@
 
           <article class="meal-card reveal" data-category="home" data-name="rice stew beef chicken tomato gravy">
             <div class="meal-image">
-            
+              <div class="image-label">rice-stew.jfif</div>
               <img src="rice-stew.jfif" alt="Rice and Stew" />
             </div>
             <div class="meal-content">
@@ -1256,26 +1285,35 @@
                 <div class="badge">Home Meal</div>
               </div>
               <p>
-                A comforting meal served in many homes with beef or chicken cooked
-                in a rich tomato based stew.
+                A comforting home meal commonly served in many South African households. It usually
+                includes fluffy rice with rich beef or chicken stew prepared with onion, tomato, and seasoning.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Rice</li>
-                    <li>Beef or chicken pieces</li>
-                    <li>Onion, tomato, garlic</li>
-                    <li>Curry powder or mixed spices</li>
+                    <li>2 cups rice</li>
+                    <li>500 g beef or chicken pieces</li>
+                    <li>1 onion, chopped</li>
+                    <li>2 tomatoes, chopped or grated</li>
+                    <li>2 cloves garlic, crushed</li>
+                    <li>1 tablespoon curry powder or mixed spice</li>
+                    <li>Salt and black pepper</li>
+                    <li>2 tablespoons oil</li>
+                    <li>2 cups water</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Cook rice separately.</li>
-                    <li>Fry onion and garlic, then brown the meat.</li>
-                    <li>Add tomato and seasoning.</li>
-                    <li>Simmer until tender and serve over rice.</li>
+                    <li>Rinse the rice well, place it in a pot with water and a little salt, and cook until soft.</li>
+                    <li>Drain excess water if needed and keep the rice covered so it stays warm.</li>
+                    <li>Heat oil in another pot and fry the onion until soft and lightly golden.</li>
+                    <li>Add the garlic and cook for a short time to release the flavour.</li>
+                    <li>Add the meat and brown it properly so it develops colour and flavour.</li>
+                    <li>Mix in the tomatoes, spices, salt, and pepper.</li>
+                    <li>Add water, cover, and allow the stew to simmer gently until the meat is tender.</li>
+                    <li>Cook until the sauce thickens nicely, then serve hot over the rice.</li>
                   </ol>
                 </div>
               </div>
@@ -1284,7 +1322,7 @@
 
           <article class="meal-card reveal" data-category="home" data-name="chicken curry rice durban potatoes">
             <div class="meal-image">
-           
+              <div class="image-label">chicken-curry-rice.jpg</div>
               <img src="chicken-curry-rice.jpg" alt="Chicken Curry and Rice" />
             </div>
             <div class="meal-content">
@@ -1296,26 +1334,36 @@
                 <div class="badge">Home Meal</div>
               </div>
               <p>
-                A rich, warming curry with tender chicken and potatoes,
-                often served with fluffy rice.
+                A warming curry made with tender chicken, potatoes, and spices. This meal is rich,
+                comforting, and widely loved for lunch or supper.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Chicken pieces</li>
-                    <li>Curry powder</li>
-                    <li>Potatoes</li>
-                    <li>Onion and tomato</li>
+                    <li>500 g chicken pieces</li>
+                    <li>2 potatoes, peeled and chopped</li>
+                    <li>1 onion, chopped</li>
+                    <li>2 tomatoes, grated</li>
+                    <li>1 to 2 tablespoons curry powder</li>
+                    <li>1 teaspoon turmeric</li>
+                    <li>1 teaspoon garlic and ginger paste</li>
+                    <li>2 tablespoons oil</li>
+                    <li>Salt to taste</li>
+                    <li>Cooked rice for serving</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Fry onion with curry spices.</li>
-                    <li>Add chicken and brown lightly.</li>
-                    <li>Add potatoes, tomato, and water.</li>
-                    <li>Simmer until thick and serve with rice.</li>
+                    <li>Heat oil in a pot and fry the onion until soft and slightly golden.</li>
+                    <li>Add garlic, ginger, curry powder, and turmeric, then stir for a short time.</li>
+                    <li>Add the chicken pieces and mix well so the spice coats the meat evenly.</li>
+                    <li>Cook the chicken for several minutes until it starts to brown.</li>
+                    <li>Add the grated tomatoes and allow them to cook down into a sauce base.</li>
+                    <li>Add potatoes, salt, and enough water to create gravy.</li>
+                    <li>Cover and simmer until the chicken is cooked and the potatoes are soft.</li>
+                    <li>When the curry is thick and rich, serve it hot with fluffy rice.</li>
                   </ol>
                 </div>
               </div>
@@ -1324,7 +1372,7 @@
 
           <article class="meal-card reveal" data-category="traditional home" data-name="samp beans umngqusho traditional">
             <div class="meal-image">
-       
+              <div class="image-label">samp-beans.jfif</div>
               <img src="samp-beans.jfif" alt="Samp and Beans" />
             </div>
             <div class="meal-content">
@@ -1336,26 +1384,32 @@
                 <div class="badge">Traditional</div>
               </div>
               <p>
-                A filling and respected traditional meal made with samp and beans,
-                often prepared slowly for full flavour.
+                A respected and filling traditional meal prepared with samp and beans. It is cooked
+                slowly to develop softness, depth, and a hearty texture.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Samp</li>
-                    <li>Sugar beans</li>
-                    <li>Onion</li>
-                    <li>Butter or oil</li>
+                    <li>2 cups samp</li>
+                    <li>1 cup sugar beans</li>
+                    <li>1 onion, chopped</li>
+                    <li>2 tablespoons butter or oil</li>
+                    <li>Salt to taste</li>
+                    <li>Optional: stock cube for extra flavour</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Soak samp and beans overnight if possible.</li>
-                    <li>Boil until soft and tender.</li>
-                    <li>Fry onion separately.</li>
-                    <li>Mix together, season, and serve warm.</li>
+                    <li>Wash the samp and beans properly and soak them overnight if possible.</li>
+                    <li>Drain them and place them in a pot with plenty of fresh water.</li>
+                    <li>Boil first, then reduce the heat and cook until both the samp and beans are tender.</li>
+                    <li>Stir from time to time and add more water if needed during cooking.</li>
+                    <li>In a separate pan, fry the onion in butter or oil until soft and fragrant.</li>
+                    <li>Add the cooked onion mixture to the pot and season with salt.</li>
+                    <li>Allow everything to simmer together for a few more minutes.</li>
+                    <li>Serve warm as a full meal or with meat on the side if desired.</li>
                   </ol>
                 </div>
               </div>
@@ -1364,7 +1418,7 @@
 
           <article class="meal-card reveal" data-category="street" data-name="kota quarter loaf chips polony egg cheese">
             <div class="meal-image">
-           
+              <div class="image-label">Kota.jfif</div>
               <img src="Kota.jfif" alt="Kota" />
             </div>
             <div class="meal-content">
@@ -1376,25 +1430,32 @@
                 <div class="badge">Street Food</div>
               </div>
               <p>
-                A popular township favourite made from quarter bread filled with hot chips and tasty toppings.
+                A township street-food favourite made from a quarter loaf of bread filled with hot chips
+                and tasty extras such as polony, egg, cheese, Russian sausage, atchar, or sauces.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Quarter loaf of bread</li>
-                    <li>Chips or fries</li>
-                    <li>Polony, egg, cheese</li>
-                    <li>Sauces of choice</li>
+                    <li>1 quarter loaf of bread</li>
+                    <li>Freshly fried chips</li>
+                    <li>Polony slices</li>
+                    <li>1 fried egg</li>
+                    <li>Cheese slices</li>
+                    <li>Sauces such as ketchup, mayonnaise, or chilli sauce</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Hollow out the bread slightly.</li>
-                    <li>Add hot chips.</li>
-                    <li>Add fillings and sauces.</li>
-                    <li>Serve immediately while hot.</li>
+                    <li>Cut the quarter loaf neatly and remove some of the soft inside bread to make space.</li>
+                    <li>Fry the chips until golden, cooked through, and still hot.</li>
+                    <li>Cook the egg and lightly heat or fry the polony if preferred.</li>
+                    <li>Layer the chips into the bread first so they fill the base well.</li>
+                    <li>Add the egg, polony, and cheese neatly on top of the chips.</li>
+                    <li>Pour sauces over the fillings according to taste.</li>
+                    <li>Press the fillings down gently so the kota holds together better.</li>
+                    <li>Serve immediately while the bread is fresh and the fillings are still warm.</li>
                   </ol>
                 </div>
               </div>
@@ -1403,7 +1464,7 @@
 
           <article class="meal-card reveal" data-category="traditional home" data-name="chakalaka pap beans spicy vegetable">
             <div class="meal-image">
-     
+              <div class="image-label">chakalaka-pap.jfif</div>
               <img src="chakalaka-pap.jfif" alt="Chakalaka and Pap" />
             </div>
             <div class="meal-content">
@@ -1415,25 +1476,34 @@
                 <div class="badge">Traditional</div>
               </div>
               <p>
-                A strong braai and home classic that combines pap with a spicy vegetable and bean relish.
+                A strong braai and home favourite that combines pap with a spicy vegetable relish,
+                often made with onion, carrots, peppers, beans, and curry seasoning.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Beans</li>
-                    <li>Carrots, onion, peppers</li>
-                    <li>Curry powder and spices</li>
                     <li>Pap prepared separately</li>
+                    <li>1 onion, chopped</li>
+                    <li>1 carrot, grated</li>
+                    <li>1 green pepper, chopped</li>
+                    <li>1 cup baked beans</li>
+                    <li>1 tablespoon curry powder</li>
+                    <li>2 tablespoons oil</li>
+                    <li>Salt and chilli to taste</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Fry onion and spices.</li>
-                    <li>Add vegetables and cook until tender.</li>
-                    <li>Add beans and simmer.</li>
-                    <li>Serve with hot pap.</li>
+                    <li>Heat oil in a pan and fry the onion until soft and slightly golden.</li>
+                    <li>Add the curry powder and stir briefly so the spice releases its aroma.</li>
+                    <li>Add the grated carrot and chopped green pepper.</li>
+                    <li>Cook the vegetables until they begin to soften but still keep some texture.</li>
+                    <li>Add the baked beans and mix everything together well.</li>
+                    <li>Season with salt and chilli according to taste.</li>
+                    <li>Simmer for a few minutes until the chakalaka is hot and flavourful.</li>
+                    <li>Serve next to hot pap for a complete and satisfying meal.</li>
                   </ol>
                 </div>
               </div>
@@ -1442,7 +1512,7 @@
 
           <article class="meal-card reveal" data-category="traditional home" data-name="mogodu tripe traditional stew">
             <div class="meal-image">
-      
+              <div class="image-label">Mogodu.jpg</div>
               <img src="Mogodu.jpg" alt="Mogodu" />
             </div>
             <div class="meal-content">
@@ -1454,26 +1524,33 @@
                 <div class="badge">Traditional</div>
               </div>
               <p>
-                A beloved traditional tripe dish prepared patiently for tenderness
-                and served with pap or another starch.
+                A beloved traditional tripe dish that requires patience and careful cleaning. It is often
+                served with pap and appreciated for its rich taste and soft texture.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Tripe</li>
-                    <li>Onion and tomato</li>
-                    <li>Curry powder or spices</li>
-                    <li>Salt and seasoning</li>
+                    <li>1 kg tripe</li>
+                    <li>1 onion, chopped</li>
+                    <li>2 tomatoes, grated</li>
+                    <li>1 tablespoon curry powder or mixed spice</li>
+                    <li>Salt to taste</li>
+                    <li>2 tablespoons oil</li>
+                    <li>Water for boiling</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Clean the tripe thoroughly.</li>
-                    <li>Boil until soft and tender.</li>
-                    <li>Fry onion and tomato with spices.</li>
-                    <li>Add tripe and simmer before serving.</li>
+                    <li>Clean the tripe very thoroughly under running water until it is properly washed.</li>
+                    <li>Place it in a pot with water and boil until it becomes soft and tender.</li>
+                    <li>This may take a long time, so continue cooking patiently and add water if needed.</li>
+                    <li>Once tender, cut the tripe into smaller pieces if necessary.</li>
+                    <li>In another pot or pan, fry onion in oil until soft.</li>
+                    <li>Add the tomatoes and spice, then cook into a rich sauce base.</li>
+                    <li>Add the cooked tripe and allow it to simmer in the sauce for additional flavour.</li>
+                    <li>Serve hot with pap or another starch of your choice.</li>
                   </ol>
                 </div>
               </div>
@@ -1482,7 +1559,7 @@
 
           <article class="meal-card reveal" data-category="street home" data-name="vetkoek mince fat cake street food">
             <div class="meal-image">
-        
+              <div class="image-label">vetkoek-mince.jfif</div>
               <img src="vetkoek-mince.jfif" alt="Vetkoek and Mince" />
             </div>
             <div class="meal-content">
@@ -1494,26 +1571,34 @@
                 <div class="badge">Street Food</div>
               </div>
               <p>
-                A widely loved fried dough meal filled with savoury mince,
-                suitable for both home and street food style service.
+                A widely loved fried dough meal filled with savoury mince. It works well as a filling
+                street-food item or a comforting home snack.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
-                    <li>Flour and yeast</li>
-                    <li>Water and salt</li>
-                    <li>Mince</li>
-                    <li>Onion and seasoning</li>
+                    <li>4 cups flour</li>
+                    <li>1 packet yeast</li>
+                    <li>1 teaspoon salt</li>
+                    <li>Warm water</li>
+                    <li>Cooking oil for deep frying</li>
+                    <li>500 g mince</li>
+                    <li>1 onion, chopped</li>
+                    <li>Seasoning and spices</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Prepare dough and allow it to rise.</li>
-                    <li>Fry until golden brown.</li>
-                    <li>Cook mince with onion and spice.</li>
-                    <li>Slice and fill the vetkoek before serving.</li>
+                    <li>Mix flour, yeast, salt, and enough warm water to form a soft dough.</li>
+                    <li>Knead until smooth, then cover and leave it to rise until doubled in size.</li>
+                    <li>Heat oil in a deep pot while preparing the savoury mince filling.</li>
+                    <li>Fry onion first, then add the mince and cook until browned.</li>
+                    <li>Season the mince well and cook until the mixture is rich and not too watery.</li>
+                    <li>Shape portions of dough and fry them until golden brown on both sides.</li>
+                    <li>Drain the vetkoek on paper towel to remove extra oil.</li>
+                    <li>Slice each vetkoek open and fill it with the cooked mince before serving.</li>
                   </ol>
                 </div>
               </div>
@@ -1522,7 +1607,7 @@
 
           <article class="meal-card reveal" data-category="street home" data-name="bunny chow durban curry bread">
             <div class="meal-image">
-      
+              <div class="image-label">bunny-chow.jfif</div>
               <img src="bunny-chow.jfif" alt="Bunny Chow" />
             </div>
             <div class="meal-content">
@@ -1534,8 +1619,8 @@
                 <div class="badge">Street Food</div>
               </div>
               <p>
-                A famous bread based curry meal loved for its rich flavour and practical,
-                filling presentation.
+                A famous Durban-style bread-based curry meal loved for its rich flavour, generous filling,
+                and practical street-food style presentation.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
@@ -1543,16 +1628,23 @@
                   <ul>
                     <li>Half or quarter loaf of bread</li>
                     <li>Chicken, beef, or bean curry</li>
-                    <li>Onion, tomato, spices</li>
+                    <li>1 onion</li>
+                    <li>Tomatoes</li>
+                    <li>Curry spices</li>
+                    <li>Oil and salt</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Prepare and cook the curry.</li>
-                    <li>Hollow out the bread carefully.</li>
-                    <li>Fill the bread with hot curry.</li>
-                    <li>Serve immediately.</li>
+                    <li>Prepare the curry first by frying onion and spices in oil.</li>
+                    <li>Add the chosen meat or beans and cook until the ingredients are well coated.</li>
+                    <li>Add tomatoes, water, and seasoning, then simmer until the curry thickens.</li>
+                    <li>Take the bread loaf and carefully cut out the inner soft portion.</li>
+                    <li>Leave enough bread around the sides so the loaf keeps its shape.</li>
+                    <li>Spoon the hot curry into the hollowed-out bread.</li>
+                    <li>Use the removed bread piece as a lid or extra serving piece.</li>
+                    <li>Serve immediately while still hot and full of flavour.</li>
                   </ol>
                 </div>
               </div>
@@ -1561,7 +1653,7 @@
 
           <article class="meal-card reveal" data-category="home traditional" data-name="grilled chicken pap braai bbq">
             <div class="meal-image">
-  
+              <div class="image-label">grilled-chicken-pap.jfif</div>
               <img src="grilled-chicken-pap.jfif" alt="Grilled Chicken and Pap" />
             </div>
             <div class="meal-content">
@@ -1573,26 +1665,31 @@
                 <div class="badge">Home Meal</div>
               </div>
               <p>
-                A practical and satisfying meal built around seasoned chicken and warm pap,
-                suitable for family meals and events.
+                A practical and satisfying meal made with seasoned chicken and warm pap. It suits family
+                lunches, gatherings, and everyday home cooking.
               </p>
               <div class="recipe-columns">
                 <div class="recipe-box">
                   <h4>Ingredients</h4>
                   <ul>
                     <li>Chicken pieces</li>
-                    <li>BBQ spice or seasoning</li>
-                    <li>Pap</li>
-                    <li>Relish or chakalaka</li>
+                    <li>BBQ spice, paprika, salt, and pepper</li>
+                    <li>2 tablespoons oil</li>
+                    <li>Pap prepared separately</li>
+                    <li>Relish or chakalaka for serving</li>
                   </ul>
                 </div>
                 <div class="recipe-box">
-                  <h4>Method</h4>
+                  <h4>Detailed Method</h4>
                   <ol>
-                    <li>Season the chicken well.</li>
-                    <li>Grill, fry, or bake until cooked through.</li>
-                    <li>Prepare pap separately.</li>
-                    <li>Serve together with sauce or relish.</li>
+                    <li>Wash the chicken, drain well, and season it generously with the spice mixture.</li>
+                    <li>Rub the oil and seasoning into the chicken so the flavour spreads evenly.</li>
+                    <li>Place the chicken on a grill, in the oven, or in a pan over medium heat.</li>
+                    <li>Cook and turn it from time to time so it browns evenly on all sides.</li>
+                    <li>Continue cooking until the inside is fully done and the outside is well coloured.</li>
+                    <li>Prepare pap in a separate pot while the chicken cooks.</li>
+                    <li>Warm the relish or chakalaka before serving.</li>
+                    <li>Plate the pap, place the grilled chicken beside it, and add the relish on the side.</li>
                   </ol>
                 </div>
               </div>
@@ -1614,8 +1711,8 @@
             <p class="quote">Clean. Safe. Consistent. Respectful to every person being served.</p>
             <p>
               My goal is to keep learning and growing in food service by combining safe food handling,
-              good presentation, and practical meal preparation. This page is designed to reflect
-              discipline, neatness, and a real commitment to food work.
+              proper cleanliness, good presentation, and practical meal preparation. This page reflects
+              discipline, neatness, and a genuine commitment to food work.
             </p>
           </article>
 
@@ -1626,7 +1723,7 @@
                 <div class="timeline-step">1</div>
                 <div>
                   <strong>Learn the basics</strong>
-                  <p>Understand food safety, cleanliness, and kitchen organization.</p>
+                  <p>Understand food safety, hygiene, kitchen organization, and correct storage methods.</p>
                 </div>
               </div>
 
@@ -1634,7 +1731,7 @@
                 <div class="timeline-step">2</div>
                 <div>
                   <strong>Practice popular meals</strong>
-                  <p>Build confidence by preparing common meals many customers already know and love.</p>
+                  <p>Build confidence by preparing common meals many people already know, trust, and enjoy.</p>
                 </div>
               </div>
 
@@ -1642,7 +1739,7 @@
                 <div class="timeline-step">3</div>
                 <div>
                   <strong>Improve presentation</strong>
-                  <p>Use clean plating, proper storage, and consistent preparation methods.</p>
+                  <p>Use clean plating, proper timing, and consistent cooking methods to improve service quality.</p>
                 </div>
               </div>
             </div>
@@ -1659,10 +1756,10 @@
 
           <h2>Thank You for Visiting My Food Vlog</h2>
           <p>
-            This page can be shared together with my resume as a personal portfolio link
-            to show my interest in food service, my willingness to learn, and the practical
-            food knowledge I am building. Replace each meal image with your own photo
-            using the same image names to keep the code working.
+            This page can be shared together with my resume as a personal portfolio link to show my
+            interest in food service, my willingness to learn, and the practical food knowledge I am
+            building. You can replace each meal image with your own photo by using the same file names
+            or by updating the image paths in the code.
           </p>
 
           <a class="btn btn-primary no-print" href="#about">Back to Top</a>
