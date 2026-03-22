@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#b85c1b" />
   <meta
     name="description"
-    content="NTEBOGENG PHAHLAMOHLAKA food vlog portfolio featuring food handling concepts, kitchen standards, and popular South African meals with detailed recipes."
+    content="NTEBOGENG PHAHLAMOHLAKA food vlog portfolio featuring food handling concepts, kitchen standards, popular South African meals, and TikTok cooking content."
   />
   <title>NTEBOGENG PHAHLAMOHLAKA | Food Vlog Portfolio</title>
 
@@ -314,7 +314,7 @@
 
     .hero-card{
       padding:30px;
-      min-height:500px;
+      min-height:530px;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -383,7 +383,7 @@
       font-size:1.02rem;
       line-height:1.8;
       color:var(--muted);
-      margin:16px 0 22px;
+      margin:16px 0 18px;
       max-width:780px;
     }
 
@@ -391,6 +391,48 @@
       display:flex;
       flex-wrap:wrap;
       gap:12px;
+      margin-top:4px;
+    }
+
+    .social-strip{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+    }
+
+    .social-card{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px;
+      border-radius:20px;
+      border:1px solid rgba(193,100,27,0.12);
+      background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,245,236,0.96));
+    }
+
+    .social-card strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:1rem;
+    }
+
+    .social-card p{
+      margin:0;
+      font-size:.95rem;
+      line-height:1.7;
+    }
+
+    .social-link{
+      word-break:break-word;
+      color:var(--primary-dark);
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .social-link:hover{
+      text-decoration:underline;
     }
 
     .hero-side{
@@ -718,6 +760,40 @@
       box-shadow:0 12px 24px rgba(46,125,50,0.18);
     }
 
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .contact-item{
+      border:1px solid rgba(193,100,27,0.12);
+      border-radius:18px;
+      padding:18px;
+      background:linear-gradient(180deg, #fff 0%, #fff9f2 100%);
+    }
+
+    .contact-item h4{
+      margin:0 0 8px;
+      color:var(--primary-dark);
+      font-size:1rem;
+    }
+
+    .contact-item p,
+    .contact-item a{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .contact-item a:hover{
+      color:var(--primary-dark);
+      text-decoration:underline;
+    }
+
     .footer-card{
       text-align:center;
       margin:24px 0 34px;
@@ -732,6 +808,14 @@
     .footer-card p{
       max-width:860px;
       margin:0 auto 16px;
+    }
+
+    .footer-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:16px;
     }
 
     .reveal{
@@ -844,6 +928,7 @@
       .offline-note,
       .controls,
       .hero-actions,
+      .footer-actions,
       .no-print{
         display:none !important;
       }
@@ -858,7 +943,8 @@
       .concept-grid,
       .meal-card,
       .recipe-columns,
-      .triple{
+      .triple,
+      .contact-grid{
         display:block;
       }
 
@@ -881,7 +967,8 @@
       .meal-card,
       .recipe-columns,
       .concept-grid,
-      .triple{
+      .triple,
+      .contact-grid{
         grid-template-columns:1fr;
       }
 
@@ -941,7 +1028,7 @@
       <h2 class="loader-title">Loading Food Vlog Portfolio</h2>
       <p class="loader-text">
         Preparing a clean food portfolio with kitchen knowledge, detailed meal recipes,
-        and food handling concepts for NTEBOGENG PHAHLAMOHLAKA.
+        and cooking content for NTEBOGENG PHAHLAMOHLAKA.
       </p>
       <div class="loader-track">
         <div class="loader-bar" id="loaderBar"></div>
@@ -966,6 +1053,7 @@
           <a href="#concepts">Food Handling</a>
           <a href="#meals">Top Meals</a>
           <a href="#kitchen">Kitchen Standard</a>
+          <a href="#connect">TikTok</a>
         </nav>
       </div>
     </header>
@@ -992,16 +1080,35 @@
           <h1>NTEBOGENG <span>PHAHLAMOHLAKA</span></h1>
 
           <p>
-            Welcome to my food vlog portfolio written to showcase my passion for food
+            Welcome to my one-page food vlog portfolio designed to present my passion for food
             preparation, kitchen discipline, safe food handling, and some of the most loved South African
             and African meals. This page reflects my growing knowledge of practical cooking, neat
             presentation, cleanliness, and the standards expected in restaurants, food stores, catering
             spaces, and home kitchens.
           </p>
 
+          <p>
+            I also share my cooking journey on TikTok, where I post food content, cooking skills,
+            meal preparation ideas, and practical kitchen inspiration. My page helps showcase both
+            my interest in food service and my confidence in presenting meals visually.
+          </p>
+
           <div class="hero-actions no-print">
             <a class="btn btn-primary" href="#meals">Explore Top Meals</a>
             <a class="btn" href="#concepts">View Food Concepts</a>
+            <a class="btn" href="https://www.tiktok.com/@ntebogengcooks?_r=1&_t=ZS-94sockIhzQv" target="_blank" rel="noopener noreferrer">Visit My TikTok</a>
+          </div>
+
+          <div class="social-strip">
+            <div class="social-card">
+              <div>
+                <strong>My Cooking TikTok Page</strong>
+                <p>
+                  Follow my cooking content here:
+                  <a class="social-link" href="https://www.tiktok.com/@ntebogengcooks?_r=1&_t=ZS-94sockIhzQv" target="_blank" rel="noopener noreferrer">@ntebogengcooks</a>
+                </p>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -1033,8 +1140,8 @@
             </div>
 
             <div class="stat-box">
-              <div class="stat-number">2024</div>
-              <div class="stat-label">Designed in article style to feel established, polished, and professional</div>
+              <div class="stat-number">TikTok</div>
+              <div class="stat-label">Cooking content page added to strengthen the portfolio and social presence</div>
             </div>
           </div>
         </aside>
@@ -1747,6 +1854,41 @@
         </div>
       </section>
 
+      <section id="connect">
+        <div class="section-head reveal">
+          <div>
+            <div class="article-meta">
+              <div class="meta-pill">Published • December 2024</div>
+              <div class="meta-pill">Section • Social Presence</div>
+            </div>
+
+            <h2>Connect With My Cooking Content</h2>
+            <p>
+              My TikTok page extends this portfolio by showing my cooking skills, meal preparation content,
+              and visual food presentation. It gives viewers another way to see my passion for food in action.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-item reveal">
+            <h4>TikTok Page</h4>
+            <p>
+              <a href="https://www.tiktok.com/@ntebogengcooks?_r=1&_t=ZS-94sockIhzQv" target="_blank" rel="noopener noreferrer">
+                @ntebogengcooks
+              </a>
+            </p>
+          </article>
+
+          <article class="contact-item reveal">
+            <h4>Portfolio Purpose</h4>
+            <p>
+            This page is a space where I share my love for cooking, documenting meals, skills, and experiences as I continue learning and growing in the kitchen.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section>
         <article class="footer-card reveal">
           <div class="article-meta" style="justify-content:center;">
@@ -1762,7 +1904,17 @@
             or by updating the image paths in the code.
           </p>
 
-          <a class="btn btn-primary no-print" href="#about">Back to Top</a>
+          <p>
+            You can also view my cooking content on TikTok here:
+            <a class="social-link" href="https://www.tiktok.com/@ntebogengcooks?_r=1&_t=ZS-94sockIhzQv" target="_blank" rel="noopener noreferrer">
+              @ntebogengcooks
+            </a>
+          </p>
+
+          <div class="footer-actions no-print">
+            <a class="btn btn-primary" href="#about">Back to Top</a>
+            <a class="btn" href="https://www.tiktok.com/@ntebogengcooks?_r=1&_t=ZS-94sockIhzQv" target="_blank" rel="noopener noreferrer">Open TikTok Page</a>
+          </div>
         </article>
       </section>
     </main>
